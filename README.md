@@ -7,6 +7,10 @@ This project was purely built using HTML, CSS, and JavaScript. As of now, this w
 ## What is the goal of this project?
 I wanted to create an "electronic resume" for others to get to know me! I want my design and code to speak for me. In addition, this application adopts both a Single Page Application and mobile responsive design. Both concepts were new to me and I am happy I got to learn and experience them :)
 
+## License
+This project will not be offering any license. That is, "...nobody else can copy, distribute, or modify [my] work without being at risk of take-downs, shake-downs, or litigation." For more information, please visit https://choosealicense.com/no-permission/.
+
+
 ## To-do:
 
 1) Finsih Projects/Portfolio section
