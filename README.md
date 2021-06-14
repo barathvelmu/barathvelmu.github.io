@@ -8,4 +8,4 @@ This project was purely built using HTML, CSS, and JavaScript. As of now, this w
 I wanted to create an "electronic resume" for others to get to know me! I want my design and code to speak for me. In addition, this application adopts both a Single Page Application and mobile responsive design. Both concepts were new to me and I am happy I got to learn and experience them :)
 
 ## Project Link: 
-Please visit: barathvelmu.github.io
+Please visit: https://barathvelmu.github.io
