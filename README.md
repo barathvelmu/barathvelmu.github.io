@@ -1,4 +1,4 @@
-# Barath Personal Project
+# Barath Personal Project 🚀
 ## Introduction
 You have just landed on the GitHub repository for my personal website! 
 
