@@ -7,5 +7,16 @@ This project was purely built using HTML, CSS, and JavaScript. As of now, this w
 ## What is the goal of this project?
 I wanted to create an "electronic resume" for others to get to know me! I want my design and code to speak for me. In addition, this application adopts both a Single Page Application and mobile responsive design. Both concepts were new to me and I am happy I got to learn and experience them :)
 
+## To-do:
+
+1) Finsih Projects/Portfolio section
+2) Phone number comes as blue on Safari mobile page. See if can be fixed (e.g., diff color).
+3) When site is refreshed, it goes back to home page. Fix this. 
+4) Custom alert when form is submitted would look nice. 
+5) Add a favicon to website.
+6) Mobile projects "View Details" has too much space, fix in "responsive.css".
+7) Make gear palette have a colored background (e.g., home page color) and not transparent. 
+
+
 ## Project Link: 
 Please visit: https://barathvelmu.github.io
