@@ -27,7 +27,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 50%;
-    background-color: var(--bg-black-50); 
+    
 }
 
 .style-switcher .s-icon i{
