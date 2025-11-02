@@ -533,3 +533,19 @@ strong {
 .experience-item:last-of-type {
   border-bottom: none;
 }
+
+/* tighten gap before Projects */
+#experience {
+  margin-bottom: 1.25rem;
+}
+
+/* was 2rem via section */
+#projects h2 {
+  margin-top: 0.75rem;
+}
+
+/* was 1.75rem */
+#experience .experience-item:last-child {
+  padding-bottom: 0.5rem;
+  border-bottom: none;
+}
