@@ -12,7 +12,7 @@
     <meta property="og:url" content="#">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@anonymous">
-    <title>Academic Homepage</title>
+    <title>Barath Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -20,13 +20,12 @@
 <body id="top">
     <header>
         <div class="header-content">
-            <h1>[Name]</h1>
-            <p>CS PhD Student • [University]</p>
+            <h1>Barath Velmurugan</h1>
+            <p>Data Science | Massachusetts Institute of Technology</p>
             <div class="social-links-header">
-                <a href="#"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
-                <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
-                <a href="#"><i class="fab fa-github"></i>GitHub</a>
-                <a href="mailto:email@university.edu"><i class="fas fa-envelope"></i>Email</a>
+                <a href="https://www.linkedin.com/in/barathvelmu/" target="_blank"><i class="fas fa-graduation-cap"></i>LinkedIn</a>
+                <a href="https://github.com/barathvelmu"><i class="fab fa-github" target="_blank"></i>GitHub</a>
+                <a href="mailto:barathv@mit.edu" target="_blank"><i class="fas fa-envelope"></i>Email</a>
             </div>
         </div>
         <div class="header-image">
@@ -36,105 +35,251 @@
 
     <main>
         <section id="about">
-            <p>Hi! I am a PhD student in Computer Science at [University], advised by <a href="#">[Advisor]</a>.</p>
+            <p>Hi! I am a Master of Business Analytics student at the Massachusetts Institute of Technology, working with Professor <a href="https://web.mit.edu/vivekf/www/">Vivek F. Farias</a>. 
+                Previously, I received my B.Math in Statistics & CS from the University of Waterloo. My work spans software engineering, machine learning, optimization, and cloud infrastructure!</p>
+            <p><strong>I am on the job market this year (2025-2026).</strong></p>
         </section>
 
         <section id="research">
             <h2>Research</h2>
-            <p>My research focuses on <strong>[Research Area 1] and [Research Area 2]</strong>. My recent works explore:</p>
-            <ul>
-                <li>[Research Topic 1] (<a href="#">[Conference 1]'24</a>, <a href="#">[Conference 2]'23</a>, <a href="#">[Conference 3]'22</a>)</li>
-                <li>[Research Topic 2] (<a href="#">[Conference 4]'24</a>, <a href="#">[Conference 5]'23</a>, <a href="#">[Conference 6]'23</a>)</li>
-                <li>[Research Topic 3] (<a href="#">[Conference 7]'24</a>, <a href="#">[Conference 8]'23</a>, <a href="#">[Conference 9]'23</a>)</li>
-                <li>[Research Topic 4] (<a href="#">[Journal 1]'22</a>, <a href="#">[Journal 2]'21</a>)</li>
-            </ul>
+            <p>My research focuses on <strong>generative modeling of digital twins</strong> and <strong>behavioral simulation using large language models</strong>. 
+            I'm interested in how large language models can reason about human behaviour! My recent work applies these ideas to synthetic customer modeling for Anheuser-Busch InBev (ABI) at MIT.</p>
         </section>
 
-        <section id="news">
-            <h2>News</h2>
-            <div class="news-container">
-                <ul class="news-list">
-                    <li>[MM/YYYY]: [News Item 1]</li>
-                    <li>[MM/YYYY]: [News Item 2]</li>
-                    <li>[MM/YYYY]: [News Item 3]</li>
-                    <li>[MM/YYYY]: [News Item 4]</li>
-                    <li>[MM/YYYY]: [News Item 5]</li>
-                    <li>[MM/YYYY]: [News Item 6]</li>
-                    <li>[MM/YYYY]: [News Item 7]</li>
-                    <li>[MM/YYYY]: [News Item 8]</li>
-                    <li>[MM/YYYY]: [News Item 9]</li>
-                    <li>[MM/YYYY]: [News Item 10]</li>
+        <section id="experience">
+        <h2>Work Experience</h2>
+
+        <article class="experience-item">
+            <img class="experience-logo" src="images/mira.jpg" alt="MIRA logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Data Scientist (MIT Analytics Lab)</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">Mira Intel</span>
+                <span class="experience-dates">| Sept 2025 – Dec 2025</span>
+            </div>
+            <p class="experience-line">
+                Multi-agentic workflows and CV modeling for wind-turbine damage detection and forecasting.
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Built a multi-agentic workflow with OpenAI’s Agent Builder to analyze drone imagery and literature for wind-turbine blade
+damage detection and forecasting</li>
+                <li>Evaluated the workflow using held-out case predictions, calibration metrics (Brier), and robustness stress tests</li>
                 </ul>
+            </details>
             </div>
+        </article>
+        
+        <article class="experience-item">
+            <img class="experience-logo" src="images/mit.jpg" alt="MIT logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Graduate Research Assistant</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">Massachusetts Institute of Technology</span>
+                <span class="experience-dates">| Sept 2025 – Dec 2025</span>
+            </div>
+            <p class="experience-line">
+                LLM-based digital twins and behavioral simulation for ABI’s Zé Delivery (5M users) platform.
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Engineered frontier methods to build digital twins of customers from ABI's Zé Delivery platform (5M users)</li>
+                <li>Developed pipelines integrating OpenAI APIs and early ABI interview data (50 transcripts) using Python and Databricks to
+generate, test, and refine scalable synthetic personas</li>
+                <li>Leveraged insights from leading research (e.g., Twin-2K-500) to inform architecture and evaluation methods</li>
+                </ul>
+            </details>
+            </div>
+        </article>
+
+        <article class="experience-item">
+            <img class="experience-logo" src="images/pcc.jpg" alt="PCC logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Software Engineering Intern</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">PointClickCare</span>
+                <span class="experience-dates">| Sept 2024 – Dec 2024</span>
+            </div>
+            <p class="experience-line">
+                Full-Stack Platform for Senior Living Resident Management (React & Python). 
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Built a feature enabling an Azure GPT3.5 Turbo model to review lengthy SQL files and flag syntax deviations in pull
+requests, providing real-time non-intrusive quality checks using Groovy (i.e., undisturbed Jenkins build)</li>
+                <li>Took ownership of complex React UI features such as debugging production issues, building a multi-select search filter, and
+enabling editable time fields for “move-out” operations</li>
+                </ul>
+            </details>
+            </div>
+        </article>
+
+        <article class="experience-item">
+            <img class="experience-logo" src="images/manulife.jpg" alt="PCC logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Software Engineering Intern</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">Manulife</span>
+                <span class="experience-dates">| Jan 2024 – Apr 2024</span>
+            </div>
+            <p class="experience-line">
+                Qualys Cloud Agent automation in Ansible using Azure Metadata and YAML.
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Proved out Qualys Cloud Agent functionality in Ansible by leveraging Ansible Modules, Azure Metadata, and YAML </li>
+                <li>Built a Chef feature using Ruby to validate access control policies (Sudo, HBAC) during the provisioning of a server,
+strengthening security and reducing server deployment time by 15%</li>
+                </ul>
+            </details>
+            </div>
+        </article> 
+
+        <article class="experience-item">
+            <img class="experience-logo" src="images/manulife.jpg" alt="PCC logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Software Engineering Intern</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">Manulife</span>
+                <span class="experience-dates">| May 2023 – Aug 2023</span>
+            </div>
+            <p class="experience-line">
+                PySpark and Databricks pipelines for large-scale database migration (80K records).
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Transformed data fields using PySpark and Databricks to support large-scale database migration of 80,000 records</li>
+                <li>Refactored a mission critical React project by consolidating logic, modularizing code, and deleting files</li>
+                <li>Built API-driven table rendering functionality (< 3s response) using TypeScript, React, and Material UI</li>
+                <li>Streamlined client data entry by adding button functionality and 5 conditional fields using React Hooks and JSX</li>
+                </ul>
+            </details>
+            </div>
+        </article> 
+
+        <article class="experience-item">
+            <img class="experience-logo" src="images/manulife.jpg" alt="PCC logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Software Engineering Intern</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">Manulife</span>
+                <span class="experience-dates">| Sept 2022 – Dec 2022</span>
+            </div>
+            <p class="experience-line">
+                Azure Logic Apps integration of Manulife Bank (SOAP) and Salesforce (REST).
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Integrated Manulife Bank (SOAP) with Salesforce (REST) using Azure Logic Apps, achieving 42% more performance (less than 1s
+latency) and near-zero downtime compared to the previously deployed PCF model</li>
+                <li>Solved authentication using Azure App Service to allow the Logic App to hit the bank’s on-prem SOAP APIs</li>
+                <li>Strengthened Logic App security by implementing OAuth 2.0 authentication using Azure Active Directory</li>
+                </ul>
+            </details>
+            </div>
+        </article>
+        
+        <article class="experience-item">
+            <img class="experience-logo" src="images/pcc.jpg" alt="PCC logo">
+            <div class="experience-body">
+            <div class="experience-top">
+                <span class="experience-role">Software Engineering Intern</span>
+                <span class="experience-sep">·</span>
+                <span class="experience-org">PointClickCare</span>
+                <span class="experience-dates">| Jan 2022 – Apr 2022</span>
+            </div>
+            <p class="experience-line">
+                Azure Event Hub deployment, Python multithreading for large-scale (22M+) data ingestion
+            </p>
+            <!-- Optional expandable details -->
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Provisioned an Azure Event Hub using Java and Terraform to enable parallel ingestion of 22 million patient data</li>
+                <li>Leveraged Python multithreading to reduce script validation time for OHDSI datasets with 150,000 rows by 56%</li>
+                <li>Programmed an Azure Function using Java to detect the health of a Redis cache and PostgreSQL application</li>
+                </ul>
+            </details>
+            </div>
+        </article> 
+
+
         </section>
 
-        <section id="publications">
-            <div class="publications-header">
-                <h2 id="toggle-header">Selected Publications</h2>
-                <button id="toggle-publications" class="toggle-publications">Show All</button>
-            </div>
-            <div id="publications-container">
-                <!-- Publications will be dynamically loaded here -->
-            </div>
+        <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-item">
+            <span class="project-title"><strong>Sparse Regression for Foundational Model Pruning</strong></span>
+            <span class="project-link">(ongoing)</span>
+            <p class="project-desc">
+                Developing a lightweight foundational model and applying sparse regression for pruning to reduce parameter count while maintaining generation quality.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <span class="project-title"><strong>Hi-Expense</strong></span>
+            <span class="project-link"><a href="https://bit.ly/hiexpensee">(link)</a></span>
+            <p class="project-desc">
+                Built a personal financial management software using Python, JavaScript, Chart.js, and PostgreSQL. 
+            </p>
+        </div>
+
+        <div class="project-item">
+            <span class="project-title"><strong>ShareNote</strong></span>
+            <span class="project-link"><a href="https://bit.ly/sharenotee">(link)</a></span>
+            <p class="project-desc">
+                Developed a real-time online word processor using JavaScript, MongoDB, React, Socket.IO, and Quill API.
+            </p>
+        </div>
+
         </section>
 
-        <section id="awards">
-            <h2>Awards</h2>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 1]</div>
-            </div>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 2]</div>
-            </div>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 3]</div>
-            </div>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 4]</div>
-            </div>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 5]</div>
-            </div>
-            <div class="award-item">
-                <span class="award-year">[YYYY]</span>
-                <div class="award-desc">[Award 6]</div>
-            </div>
-        </section>
+        <section id="extracurricular">
+        <h2>Extracurricular</h2>
 
-        <section id="services">
-            <h2>Services</h2>
-            <div class="service-category">
-                <div class="service-title">Reviewer</div>
-                <p>[Conference 1 YYYY], [Conference 2 YYYY], [Conference 3 YYYY], [Conference 4 YYYY], [Journal 1 YYYY], [Journal 2 YYYY]</p>
-            </div>
+        <div class="service-category">
+            <div class="service-title">Clubs</div>
+            <p> MIT AI & ML Club, MIT Tech Club, MIT Project Management Club, UW Data Science Club, Stanford ASES</p>
+        </div>
 
-            <div class="service-category">
-                <div class="service-title">Teaching Assistant</div>
-                <p><a href="#">[Course Code 1]</a>, <a href="#">[Course Code 2]</a></p>
-            </div>
-
-            <div class="service-category">
-                <div class="service-title">Volunteer</div>
-                <p>[Role 1], [Role 2], [Role 3]</p>
-            </div>
+        <div class="service-category">
+            <div class="service-title">Conferences & Events</div>
+            <p>CODE@MIT, GAI World 2025, Hack The North, Jane Street FTTP</p>
+        </div>
         </section>
 
         <section id="miscellaneous">
-            <h2>Miscellaneous</h2>
-            <div class="misc-item">
-                <p>[Optional] Share your hobbies and interests here.</p>
-            </div>
+        <h2>Interests</h2>
+        <div class="misc-item">
+            <p>
+            <span>lo-fi music</span>, 
+            <span>long road-trips</span>, 
+            <span>watching sports (mainly basketball)</span>, 
+            and <span>eating</span>.
+            </p>
+        </div>
         </section>
     </main>
 
-    <footer>
-        <p>Last updated: [Month YYYY]. Design and source code from <a href="https://cs.stanford.edu/~yuhuiz/">Yuhui Zhang's website</a>.</p>
-    </footer>
 
     <div id="imageModal" class="modal">
         <span class="modal-close" onclick="closeModal()">&times;</span>
