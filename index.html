@@ -308,12 +308,12 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
             async src="https://gc.zgo.at/count.js"></script>
 
     <script>
-    fetch("https://barathvelmu.goatcounter.com/counter//?format=json")
+    fetch("https://barathvelmu.goatcounter.com/counter/TOTAL.json")
     .then(r => r.json())
     .then(d => {
         const el = document.getElementById("gc-visits");
-        if (el && d && typeof d.count === "number") {
-        el.innerHTML = "<strong>" + d.count.toLocaleString() + "</strong>";
+        if (el && d && d.count) {
+        el.innerHTML = "<strong>" + d.count + "</strong>";
         }
     })
     .catch(() => {
