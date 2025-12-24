@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://barathvelmu.github.io/">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=1001">
 
     <link rel="icon" type="image/png" href="images/profile.jpg">
     <link rel="apple-touch-icon" href="images/profile.jpg">
@@ -69,13 +69,12 @@
             <p class="experience-line">
                 LLM-based digital twins and behavioral simulation for ABI’s Zé Delivery (5M users) platform.
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
-                <li>Engineered frontier LLM methods to build digital twins of customers from Anheuser-Busch’s Zé Delivery app (5M users)</li>
-                <li>Generated synthetic personas on 350 customer interview transcripts using Python, Databricks, and OpenAI models</li>
-                <li>Leveraged insights from leading research, including Twin-2K-500, to inform architecture and evaluation methods</li>
+                <li>Developed a scalable digital twin framework to simulate user interviews using data from AB InBev’s 5M-user delivery application</li>
+                <li>Built an alignment pipeline in Python and Databricks processing 319 Brazilian-Portuguese interviews for persona modeling</li>
+                <li>Prototyped an automated LLM-as-judge evaluation harness quantifying coherence, temporal consistency, and fidelity</li>
                 </ul>
             </details>
             </div>
@@ -85,7 +84,7 @@
             <img class="experience-logo" src="images/mira.jpg" alt="MIRA logo">
             <div class="experience-body">
             <div class="experience-top">
-                <span class="experience-role">Research (MIT Analytics Lab)</span>
+                <span class="experience-role">Research (MIT Analytics Lab — 2025 Winners)</span>
                 <span class="experience-sep">·</span>
                 <span class="experience-org">Mira Intel</span>
                 <span class="experience-dates">| Sept 2025 – Dec 2025</span>
@@ -93,12 +92,13 @@
             <p class="experience-line">
                 Computer vision & multi-agent workflow for wind-turbine damage detection and forecasting.
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
-                <li>Implemented a YOLOv8 vision model to classify wind-turbine damage with 90% accuracy in bounding-box detection</li>
-                <li>Built a multi-agentic workflow with OpenAI’s Agent Builder achieving 75% interpretive accuracy in damage forecasting</li>
+                <li>Awarded 1st Place in MIT Analytics Lab (top team among 22 teams across 21 industry partners) <a href="https://ide.mit.edu/insights/2025-analytics-lab-winners-announced/" target="_blank">[official announcement]</a></li>
+                <li>Constructed a computer vision pipeline that ingests images of wind-turbine blades, predicts damage, and forecasts wear</li>
+                <li>Engineered a YOLOv8 damage detector using Python achieving 0.96 F1 on critical defects via class-imbalance correction</li>
+                <li>Architected a multi-agent workflow using OpenAI Agent Builder to convert lengthy damage reports into prognostic JSONs</li>
                 </ul>
             </details>
             </div>
@@ -116,7 +116,6 @@
             <p class="experience-line">
                 A full-stack platform to support the Senior Living Resident Management market (React & Python). 
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
@@ -141,7 +140,6 @@ enabling editable time fields for “move-out” operations</li>
             <p class="experience-line">
                 Qualys Cloud Agent automation in Ansible using Azure Metadata and YAML.
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
@@ -165,7 +163,6 @@ strengthening security and reducing server deployment time by 15%</li>
             <p class="experience-line">
                 PySpark and Databricks pipelines for large-scale database migration (80K records).
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
@@ -190,7 +187,6 @@ strengthening security and reducing server deployment time by 15%</li>
             <p class="experience-line">
                 Azure Logic Apps integration of Manulife Bank (SOAP) and Salesforce (REST).
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
@@ -215,7 +211,6 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
             <p class="experience-line">
                 Azure Event Hub deployment & Python multithreading for large-scale (22M+) data ingestion.
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
@@ -239,7 +234,6 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
             <p class="experience-line">
                 API development and unit testing using Spring and JUnit.
             </p>
-            <!-- Optional expandable details -->
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
@@ -252,65 +246,19 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
 
         </section>
 
+        <section id="publications">
+            <div class="publications-header">
+                <h2 id="toggle-header">Selected Publications</h2>
+                <button id="toggle-publications" class="toggle-publications">Show All</button>
+            </div>
+            <div id="publications-container">
+                <!-- Publications will be dynamically loaded here -->
+            </div>
+        </section>
+
         <section id="projects">
-        <h2>Publications</h2>
-
-        <div class="project-item">
-            <span class="project-title"><strong>Computer Vision for Automated Damage Detection in Offshore Wind Turbine Inspection</strong></span>
-            <span class="project-link">(ongoing)</span>
-            <p class="project-desc">
-                Developed a YOLOv8-based offshore turbine damage detection system with 96.5% F1 on severe defects, projected to save $3.4M over 25 years for a 100-turbine wind farm.
-            </p>
-        </div>
-
-        <div class="project-item">
-            <span class="project-title"><strong>Online Budget-Aware Ad Allocation via Greedy and Dual-Pricing Algorithms</strong></span>
-            <span class="project-link">(ongoing)</span>
-            <p class="project-desc">
-                Developed adaptive budget-aware algorithms for online ad allocation, narrowing the optimality gap to 4.5% on a 100k-impression dataset.
-            </p>
-        </div>
-
-        <div class="project-item">
-            <span class="project-title"><strong>Sparse Optimization for LLM Compression: A Comparative Analysis on DistilGPT-2</strong></span>
-            <span class="project-link">(ongoing)</span>
-            <p class="project-desc">
-                Applied L1 (lasso) and group lasso methods to prune DistilGPT2 (82M parameters) using the WikiText-2 dataset, reducing parameter count while maintaining perplexity.
-            </p>
-        </div>
-
-        <div class="project-item">
-            <span class="project-title"><strong>Neural Approaches for Distinguishing Human and AI-Generated Art</strong></span>
-            <span class="project-link">(ongoing)</span>
-            <p class="project-desc">
-                Built and benchmarked real-vs-AI artwork classifiers using custom CNNs and pretrained vision models (ResNet, ViT) on a 21k-image dataset, achieving high-accuracy discrimination for art-fraud detection.
-            </p>
-        </div>
-
-        <div class="project-item">
-            <span class="project-title"><strong>Deterministic Voice Intelligence Agent</strong></span>
-            <span class="project-link"><a href="https://github.com/barathvelmu/voice-intelligence" target="_blank">(link)</a></span>
-            <p class="project-desc">
-                Built a deterministic voice intelligence agent from scratch using FastAPI, OpenAI Whisper, Meta Llama 3.3 70B (via OpenRouter), LangGraph, and ElevenLabs for end-to-end speech recognition and reasoning.
-            </p>
-        </div>
-
-        <div class="project-item">
-            <span class="project-title"><strong>Hi-Expense</strong></span>
-            <span class="project-link"><a href="https://github.com/barathvelmu/Hi-Expense" target="_blank">(link)</a></span>
-            <p class="project-desc">
-                Built a personal financial management software using Python, JavaScript, Chart.js, and PostgreSQL. 
-            </p>
-        </div>
-
-        <div class="project-item">
-            <span class="project-title"><strong>ShareNote</strong></span>
-            <span class="project-link"><a href="https://github.com/barathvelmu/share-note" target="_blank">(link)</a></span>
-            <p class="project-desc">
-                Developed a real-time online word processor using JavaScript, MongoDB, React, Socket.IO, and Quill API.
-            </p>
-        </div>
-
+        <h2>Projects</h2>
+        <div id="projects-container"><!-- Projects will be dynamically loaded here --></div>
         </section>
 
         <section id="extracurricular">
@@ -331,10 +279,11 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
         <h2>Interests</h2>
         <div class="misc-item">
             <p>
+            <span>strategy games (e.g., Chess),</span>
             <span>lo-fi music</span>, 
             <span>long road-trips</span>, 
-            <span>watching sports</span>, 
-            and <span>cooking</span>!
+            <span>electronic music production</span>, 
+            and <span>specialty drinks</span>!
             </p>
         </div>
         </section>
@@ -345,6 +294,6 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
         <span class="modal-close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
-    <script src="scripts.js"></script>
+    <script src="scripts.js?v=1001"></script>
 </body>
 </html>

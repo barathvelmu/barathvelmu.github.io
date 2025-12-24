@@ -137,7 +137,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
 }
 
 .toggle-publications {
@@ -165,8 +164,8 @@ section {
 }
 
 .pub-thumbnail {
-  width: 125px;
-  height: 125px;
+  width: 140px;
+  height: 140px;
   flex-shrink: 0;
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -175,6 +174,7 @@ section {
   border-radius: 6px;
   box-shadow: 0 2px 8px var(--shadow-color);
 }
+
 
 .pub-thumbnail img {
   width: 100%;
@@ -214,7 +214,15 @@ section {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.pub-summary {
+  display: block;
+  margin: 0.45rem 0 0.55rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .pub-venue {
@@ -517,8 +525,8 @@ strong {
 }
 
 .experience-logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .experience-item {
@@ -548,4 +556,20 @@ strong {
 #experience .experience-item:last-child {
   padding-bottom: 0.5rem;
   border-bottom: none;
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+/* change if needed later */
+.toggle-publications {
+  display: none;
+}
+
+#publications h2 {
+  margin-top: 0.3rem;
 }

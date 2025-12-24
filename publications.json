@@ -1,52 +1,118 @@
 {
   "publications": [
     {
-      "title": "[Paper Title 1]",
+      "title": "Computer Vision for Automated Damage Detection in Offshore Wind Turbine Inspection",
+      "type": "publication",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11†",
-        "Author 12†"
+        "Barath Velmurugan",
+        "Riya Parikh",
+        "Ayela Chughtai",
+        "Lauren Montigue"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/1.jpg",
+      "venue": "Massachusetts Institute of Technology",
+      "thumbnail": "images/cv_paper.png",
       "selected": 1,
       "award": "",
+      "summary": "Developed a YOLOv8-based offshore turbine damage detection system with 96.5% F1 on severe defects, projected to save $3.4M over 25 years for a 100-turbine wind farm.",
       "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#"
+        "pdf": "https://drive.google.com/file/d/130VYphYyjTuNpCSqaGNk6rHCs9wSYiql/view?usp=sharing"
       }
     },
     {
-      "title": "[Paper Title 2]",
+      "title": "Online Budget-Aware Ad Allocation with Dynamic Throttling and Dual-Pricing Policies",
+      "type": "publication",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11"
+        "Barath Velmurugan",
+        "Billy Gunawan",
+        "Nathan Wangidjaja"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/2.jpg",
+      "venue": "Massachusetts Institute of Technology",
+      "thumbnail": "images/opti_paper.png",
+      "selected": 1,
+      "award": "",
+      "summary": "Developed adaptive budget-aware algorithms for online ad allocation, narrowing the optimality gap to 4.5% on a 100k-impression dataset.",
+      "links": {
+        "pdf": "https://drive.google.com/file/d/1U9YngY8R3Z3zzTd20HFU6zr1FTvtqy5T/view?usp=sharing"
+      }
+    },
+    {
+      "title": "Sparse Optimization for LLM Compression under Data Scarcity: Evidence from DistilGPT-2",
+      "type": "publication",
+      "authors": [
+        "Barath Velmurugan",
+        "Mrugank Pednekar"
+      ],
+      "venue": "Massachusetts Institute of Technology",
+      "thumbnail": "images/ml_paper.png",
+      "selected": 1,
+      "award": "",
+      "summary": "Applied L1 (lasso) and group lasso methods to prune DistilGPT2 (82M parameters) using the WikiText-2 dataset, reducing parameter count while maintaining perplexity.",
+      "links": {
+        "pdf": "https://drive.google.com/file/d/1fueKZ8FnQjAPpEE-3pHHr58KQWM0y6re/view?usp=sharing"
+      }
+    },
+    {
+      "title": "Detecting AI-Generated Art through Generative Artifacts: A CNN–ResNet50 Comparison",
+      "type": "publication",
+      "authors": [
+        "Barath Velmurugan",
+        "Owen Bao",
+        "David Izrailov",
+        "Mrugank Pednekar"
+      ],
+      "venue": "Massachusetts Institute of Technology",
+      "thumbnail": "images/dl_paper.png",
+      "selected": 1,
+      "award": "",
+      "summary": "Built and benchmarked real-vs-AI artwork classifiers using custom CNNs and pretrained vision models (CNNs, ResNet) on a 21k-image dataset, achieving high-accuracy discrimination for art-fraud detection.",
+      "links": {
+        "pdf": "https://drive.google.com/file/d/1LYP2BT3SwUHfM1nobXHwkq99PTjuqsIe/view?usp=sharing"
+      }
+    },
+    {
+      "title": "Deterministic Voice Intelligence System (from Scratch)",
+      "type": "project",
+      "authors": [
+        "Barath Velmurugan"
+      ],
+      "venue": "Independent Project",
+      "thumbnail": "images/voice_ai.png",
       "selected": 0,
       "award": "",
+      "summary": "Built a deterministic voice intelligence agent using FastAPI, Whisper, Llama 3.3 70B (OpenRouter), LangGraph, and ElevenLabs for end-to-end speech reasoning.",
       "links": {
-        "pdf": "#"
+        "code": "https://github.com/barathvelmu/voice-intelligence",
+        "pdf": "https://barathvelmu.medium.com/engineering-deterministic-voice-intelligence-dvi-a-passion-project-b35fb3f646b5"
+      }
+    },
+    {
+      "title": "Hi-Expense: Financial Management Software",
+      "type": "project",
+      "authors": [
+        "Barath Velmurugan"
+      ],
+      "venue": "Independent Project",
+      "thumbnail": "images/hi_expense.png",
+      "selected": 0,
+      "award": "",
+      "summary": "Built a personal financial management system using Python, JavaScript, Chart.js, and PostgreSQL.",
+      "links": {
+        "code": "https://github.com/barathvelmu/Hi-Expense"
+      }
+    },
+    {
+      "title": "ShareNote: Online Word Processor",
+      "type": "project",
+      "authors": [
+        "Barath Velmurugan"
+      ],
+      "venue": "Independent Project",
+      "thumbnail": "images/sharenote.jpeg",
+      "selected": 0,
+      "award": "",
+      "summary": "Developed a real-time online word processor using JavaScript, MongoDB, React, Socket.IO, and Quill API.",
+      "links": {
+        "code": "https://github.com/barathvelmu/share-note"
       }
     }
   ]
