@@ -289,6 +289,15 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
         </section>
     </main>
 
+    <p style="
+    font-size: 0.8rem;
+    color: #4a5568;
+    text-align: center;
+    margin-top: 2rem;
+    ">
+    © 2025 Barath Velmurugan |
+    <span id="gc-visits"><strong>—</strong></span> visits
+    </p>
 
     <div id="imageModal" class="modal">
         <span class="modal-close" onclick="closeModal()">&times;</span>
@@ -297,5 +306,21 @@ latency) and near-zero downtime compared to the previously deployed PCF model</l
     <script src="scripts.js?v=1001"></script>
     <script data-goatcounter="https://barathvelmu.goatcounter.com/count"
             async src="https://gc.zgo.at/count.js"></script>
+
+    <script>
+    fetch("https://barathvelmu.goatcounter.com/counter//?format=json")
+    .then(r => r.json())
+    .then(d => {
+        const el = document.getElementById("gc-visits");
+        if (el && d && typeof d.count === "number") {
+        el.innerHTML = "<strong>" + d.count.toLocaleString() + "</strong>";
+        }
+    })
+    .catch(() => {
+        const el = document.getElementById("gc-visits");
+        if (el) el.textContent = "—";
+    });
+    </script>
+
 </body>
 </html>
