@@ -72,8 +72,10 @@
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
-                <li>Building multi-objective matchmaking models for brand–partner pairing using Python, XGBoost, and BigQuery</li>
-                <li>Developing predictive models for partnership performance and monetization potential using SQL and prior affiliate data</li>
+                <li>Engineered XGBoost/LightGBM ranking models over 87M Amazon purchases, 90K training samples, 15 features, and 65K 
+                    publisher-brand pairs; validated with 38-publisher leave-one-out CV and time-based Precision@K to detect split artifacts</li>
+                <li>Architected a closed-loop label pipeline mapping 14.2M campaign rows and $247M GMV into ROAS-based training labels; fixed 
+                    $16M attribution blind spot from a production join failure before corrupted labels entered model training</li>
                 </ul>
             </details>
             </div>
@@ -91,6 +93,13 @@
             <p class="experience-line">
                 Implementing a feedback-driven prompt optimization pipeline for continuous AI agent adaptation without retraining.
             </p>
+            <details class="experience-more">
+                <summary>More</summary>
+                <ul>
+                <li>Created a prompt optimization pipeline for OCR extraction, improving accuracy by 54% (0.437 to 0.673) over 5 iterations</li>
+                <li>Built an evaluation layer, fixed scoring bugs, and used model-vs-prompt ablations (+0.188 vs +0.025) to guide refinement</li>
+                </ul>
+            </details>
             </div>
         </article>
 
@@ -109,9 +118,9 @@
             <details class="experience-more">
                 <summary>More</summary>
                 <ul>
-                <li>Developed a scalable digital twin framework to simulate user interviews using data from AB InBev’s 5M-user delivery application</li>
-                <li>Built an alignment pipeline in Python and Databricks processing 319 Brazilian-Portuguese interviews for persona modeling</li>
-                <li>Prototyped an automated LLM-as-judge evaluation harness quantifying coherence, temporal consistency, and fidelity</li>
+                <li>Developed an AB InBev digital-twin pipeline converting 319 Brazilian-Portuguese interviews into 408 queryable personas</li>
+                <li>Built a GEPA prompt-evolution loop to learn 20 behavioral rules per persona, replacing manual prompts with persona cards</li>
+                <li>Deployed an LLM-as-judge evaluation harness over 5,590 held-out turns with a 4-dimension rubric, scoring 4.72/5.0 overall</li>
                 </ul>
             </details>
             </div>
