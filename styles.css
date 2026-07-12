@@ -369,6 +369,7 @@ footer {
 /* Generic styles */
 a {
   color: var(--accent-color);
+  font-weight: 600;
   text-decoration: none;
   transition: color var(--transition-time) ease;
 }
@@ -641,6 +642,11 @@ strong {
 
 .project-card:hover .project-title {
   color: var(--accent-color);
+}
+
+/* First row needs no top rule; the section heading underline already sits above it */
+.project-card:nth-child(-n + 3) {
+  border-top: none;
 }
 
 .project-tag {
