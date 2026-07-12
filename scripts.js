@@ -5,6 +5,7 @@ let showingSelected = true;
 // Init
 document.addEventListener('DOMContentLoaded', () => {
   loadPublications();
+  initTheme();
 
   // Stagger section animations (optional)
   const sections = document.querySelectorAll('section');
@@ -15,6 +16,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggle-publications');
   if (toggleButton) toggleButton.addEventListener('click', togglePublications);
 });
+
+// Theme toggle (dark is the default; light is opt-in and persisted)
+function initTheme() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  updateThemeIcon();
+  btn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      try { localStorage.setItem('theme', 'light'); } catch (e) {}
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      try { localStorage.setItem('theme', 'dark'); } catch (e) {}
+    }
+    updateThemeIcon();
+  });
+}
+
+function updateThemeIcon() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  // Show the icon for the mode you would switch TO.
+  btn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+}
 
 // Load publications
 function loadPublications() {
@@ -56,7 +83,7 @@ function updateToggleUI() {
   if (toggleHeader) toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
 }
 
-// Render list
+// Render lists
 function renderPublications(showSelectedOnly = true) {
   const pubContainer = document.getElementById('publications-container');
   const projContainer = document.getElementById('projects-container');
@@ -71,10 +98,63 @@ function renderPublications(showSelectedOnly = true) {
     ? publications.filter(p => Number(p.selected) === 1 || p.selected === true)
     : publications;
 
-  pubsToShow.forEach(pub => pubContainer.appendChild(createPublicationElement(pub)));
-  projects.forEach(proj => projContainer.appendChild(createPublicationElement(proj)));
+  if (pubContainer) pubsToShow.forEach(pub => pubContainer.appendChild(createPublicationElement(pub)));
+  if (projContainer) projects.forEach(proj => projContainer.appendChild(createProjectCard(proj)));
 }
 
+// Build a compact project card (text-forward, no thumbnail)
+function createProjectCard(project) {
+  const card = document.createElement('div');
+  card.className = 'project-card';
+
+  if (project.category && String(project.category).trim().length > 0) {
+    const tag = document.createElement('span');
+    tag.className = 'project-tag';
+    tag.textContent = project.category;
+    card.appendChild(tag);
+  }
+
+  const title = document.createElement('div');
+  title.className = 'project-title';
+  title.textContent = project.title || '';
+  card.appendChild(title);
+
+  if (project.summary && String(project.summary).trim().length > 0) {
+    const summary = document.createElement('p');
+    summary.className = 'project-summary';
+    summary.textContent = project.summary;
+    card.appendChild(summary);
+  }
+
+  if (project.links) {
+    const links = document.createElement('div');
+    links.className = 'project-links';
+
+    const addLink = (href, label) => {
+      if (href && href !== '#') {
+        const a = document.createElement('a');
+        a.href = href;
+        a.textContent = label;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        links.appendChild(a);
+      }
+    };
+
+    addLink(project.links.code, 'Code');
+    addLink(project.links.paper, 'Paper');
+    addLink(project.links.writeup, 'Writeup');
+    addLink(project.links.thread, 'Thread');
+    addLink(project.links.demo, 'Demo');
+    addLink(project.links.models, 'Models');
+    addLink(project.links.project, 'Project');
+    addLink(project.links.pdf, project.links.pdfLabel || 'Writeup');
+
+    if (links.childNodes.length > 0) card.appendChild(links);
+  }
+
+  return card;
+}
 
 // Build a single publication card
 function createPublicationElement(publication) {
@@ -140,8 +220,6 @@ function createPublicationElement(publication) {
 
   content.appendChild(venueContainer);
 
-
-
   // Summary (your descriptions)
   if (publication.summary && String(publication.summary).trim().length > 0) {
     const summary = document.createElement('div');
@@ -158,7 +236,7 @@ function createPublicationElement(publication) {
     if (publication.links.pdf && publication.links.pdf !== '#') {
       const pdfLink = document.createElement('a');
       pdfLink.href = publication.links.pdf;
-      pdfLink.textContent = '[PDF]';
+      pdfLink.textContent = 'PDF';
       pdfLink.target = '_blank';
       pdfLink.rel = 'noopener noreferrer';
       links.appendChild(pdfLink);
@@ -167,7 +245,7 @@ function createPublicationElement(publication) {
     if (publication.links.code && publication.links.code !== '#') {
       const codeLink = document.createElement('a');
       codeLink.href = publication.links.code;
-      codeLink.textContent = '[Code]';
+      codeLink.textContent = 'Code';
       codeLink.target = '_blank';
       codeLink.rel = 'noopener noreferrer';
       links.appendChild(codeLink);
@@ -176,7 +254,7 @@ function createPublicationElement(publication) {
     if (publication.links.project && publication.links.project !== '#') {
       const projectLink = document.createElement('a');
       projectLink.href = publication.links.project;
-      projectLink.textContent = '[Project Page]';
+      projectLink.textContent = 'Project Page';
       projectLink.target = '_blank';
       projectLink.rel = 'noopener noreferrer';
       links.appendChild(projectLink);

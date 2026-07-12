@@ -70,49 +70,128 @@
       }
     },
     {
-      "title": "Deterministic Voice Intelligence System (from Scratch)",
+      "title": "Kaetram Arena",
       "type": "project",
-      "authors": [
-        "Barath Velmurugan"
-      ],
-      "venue": "Independent Project",
-      "thumbnail": "images/voice_ai.png",
+      "category": "Distillation / Agents",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Independent Research",
       "selected": 0,
       "award": "",
-      "summary": "Built a deterministic voice intelligence agent using FastAPI, Whisper, Llama 3.3 70B (OpenRouter), LangGraph, and ElevenLabs for end-to-end speech reasoning.",
+      "summary": "Teaches a small open model (Qwen 2B) to play a persistent open-world MMORPG through long-horizon, tool-mediated actions, with teacher and student sharing one typed 17-tool API. Copying a stronger cross-family teacher made the student worse; on-policy distillation from a same-family teacher lifted it from 12 to 18 out of 30 on a long-horizon quest benchmark.",
       "links": {
-        "code": "https://github.com/barathvelmu/voice-intelligence",
-        "pdf": "https://barathvelmu.medium.com/engineering-deterministic-voice-intelligence-dvi-a-passion-project-b35fb3f646b5"
+        "code": "https://github.com/barathvelmu/kaetram-arena",
+        "thread": "https://x.com/patelnir41/status/2059614365536391636",
+        "models": "https://huggingface.co/patnir41"
       }
     },
     {
-      "title": "Hi-Expense: Financial Management Software",
+      "title": "Subliminal Learning",
       "type": "project",
-      "authors": [
-        "Barath Velmurugan"
-      ],
-      "venue": "Independent Project",
-      "thumbnail": "images/hi_expense.png",
+      "category": "Interpretability",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Independent Research",
       "selected": 0,
       "award": "",
-      "summary": "Built a personal financial management system using Python, JavaScript, Chart.js, and PostgreSQL.",
+      "summary": "A replication and extension of Anthropic's subliminal-learning result across both image and language models; it traces the effect to the two models starting from the same initialization rather than to the training data, and reconciles two published numbers that had disagreed.",
       "links": {
-        "code": "https://github.com/barathvelmu/Hi-Expense"
+        "code": "https://github.com/barathvelmu/subliminal-learning",
+        "writeup": "https://open.substack.com/pub/barathvelmu/p/replicating-subliminal-learning"
       }
     },
     {
-      "title": "ShareNote: Online Word Processor",
+      "title": "Crucible",
       "type": "project",
-      "authors": [
-        "Barath Velmurugan"
-      ],
+      "category": "Agent Evaluation",
+      "authors": ["Barath Velmurugan"],
       "venue": "Independent Project",
-      "thumbnail": "images/sharenote.jpeg",
       "selected": 0,
       "award": "",
-      "summary": "Developed a real-time online word processor using JavaScript, MongoDB, React, Socket.IO, and Quill API.",
+      "summary": "A small team of cooperating agents (a researcher, a reviser, and an LLM judge) that grades how faithfully an AI's answers stay grounded in their sources and how much of the relevant material it retrieves, with per-call cost and latency tracing; built on Google's ADK and runs fully offline.",
       "links": {
-        "code": "https://github.com/barathvelmu/share-note"
+        "code": "https://github.com/barathvelmu/crucible"
+      }
+    },
+    {
+      "title": "Clinical Corpus Pipeline",
+      "type": "project",
+      "category": "ML Data Infra",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Independent Project",
+      "selected": 0,
+      "award": "",
+      "summary": "Turns synthetic medical records and claims into training examples where every clinical statement traces back to the exact source it came from, gated by automated privacy and grounding checks; dependency-free, 54 tests.",
+      "links": {
+        "code": "https://github.com/barathvelmu/clinical-corpus-pipeline"
+      }
+    },
+    {
+      "title": "Attractor Lens",
+      "type": "project",
+      "category": "Interpretability",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Independent Research",
+      "selected": 0,
+      "award": "",
+      "summary": "A tool for studying what happens when a language model is left talking to itself: it detects when the conversation converges into a repeating pattern using embedding similarity rather than the eye, and tests whether the opening prompt predicts where it lands; runs fully local.",
+      "links": {
+        "code": "https://github.com/barathvelmu/attractor-lens",
+        "writeup": "https://open.substack.com/pub/barathvelmu/p/reusable-tooling-for-llm-self-loop"
+      }
+    },
+    {
+      "title": "Deterministic Voice Intelligence",
+      "type": "project",
+      "category": "Applied AI",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Independent Project",
+      "selected": 0,
+      "award": "",
+      "summary": "A finance voice assistant built around one rule: speech recognition and the LLM only turn what you say into structured commands, while plain deterministic code makes every real decision and calculation, so the model can't invent a transaction; 85+ tests.",
+      "links": {
+        "code": "https://github.com/barathvelmu/deterministic-voice-intelligence",
+        "writeup": "https://barathvelmu.medium.com/engineering-deterministic-voice-intelligence-dvi-a-passion-project-b35fb3f646b5",
+        "demo": "https://youtu.be/M8lTtz2ptk8"
+      }
+    },
+    {
+      "title": "ScreenMem",
+      "type": "project",
+      "category": "RAG / Systems",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Independent Project",
+      "selected": 0,
+      "award": "",
+      "summary": "Gives your Mac a searchable memory of what has been on screen: it captures and reads the screen locally, then lets you search by keyword or meaning and ask questions, with every answer linked back to the moment it appeared; nothing leaves your machine.",
+      "links": {
+        "code": "https://github.com/barathvelmu/screenmem"
+      }
+    },
+    {
+      "title": "Spark Studio",
+      "type": "project",
+      "category": "Applied AI / Web",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Claude Builders @ MIT (3rd Place)",
+      "selected": 0,
+      "award": "",
+      "summary": "An AI coding playground for kids: describe a game and it builds a playable version, then shows the real code behind it and lets them ask questions and remix each other's work; 3rd place at the Claude Builders @ MIT hackathon.",
+      "links": {
+        "code": "https://github.com/barathvelmu/spark-studio",
+        "demo": "https://youtu.be/5Gxh25fKweY"
+      }
+    },
+    {
+      "title": "Project SERVE",
+      "type": "project",
+      "category": "Full-Stack Web",
+      "authors": ["Barath Velmurugan"],
+      "venue": "Team Project",
+      "selected": 0,
+      "award": "",
+      "summary": "A full member portal for a school volleyball club, with sign-in, analytics, and event registration, built end to end with Flask, Streamlit, and SQLite; an earlier team project.",
+      "links": {
+        "code": "https://github.com/barathvelmu/Project-SERVE",
+        "demo": "https://youtu.be/KRG7l4a9HeQ"
       }
     }
   ]
