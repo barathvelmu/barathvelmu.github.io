@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
   <script>
-    // Apply saved theme before first paint to avoid a flash. Light is the default.
+    // Apply the theme before first paint. Dark is the default; an explicit
+    // light-mode choice is still remembered.
     (function () {
-      try {
-        if (localStorage.getItem('theme') === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      } catch (e) {}
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+      if (savedTheme !== 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
     })();
   </script>
 
