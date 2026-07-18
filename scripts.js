@@ -6,6 +6,7 @@ let showingSelected = true;
 document.addEventListener('DOMContentLoaded', () => {
   loadPublications();
   initTheme();
+  loadVisitCount();
 
   // Stagger section animations (optional)
   const sections = document.querySelectorAll('section');
@@ -16,6 +17,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggle-publications');
   if (toggleButton) toggleButton.addEventListener('click', togglePublications);
 });
+
+async function loadVisitCount() {
+  const element = document.querySelector('#gc-visits strong');
+  if (!element) return;
+
+  const cacheKey = 'portfolio-visit-count';
+  try {
+    const cached = Number(localStorage.getItem(cacheKey));
+    if (cached > 0) element.textContent = cached.toLocaleString();
+  } catch (error) {}
+
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
+
+    try {
+      const response = await fetch('https://barathvelmu.goatcounter.com/counter/TOTAL.json', {
+        cache: 'no-store',
+        signal: controller.signal
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const data = await response.json();
+      const count = Number(data.count_unique ?? data.count);
+      if (!Number.isFinite(count) || count < 1) throw new Error('Invalid counter response');
+
+      element.textContent = count.toLocaleString();
+      try { localStorage.setItem(cacheKey, String(count)); } catch (error) {}
+      clearTimeout(timeout);
+      return;
+    } catch (error) {
+      clearTimeout(timeout);
+      if (attempt === 0) await new Promise((resolve) => setTimeout(resolve, 500));
+    }
+  }
+}
 
 // Theme toggle (dark is the default; light is opt-in and persisted)
 function initTheme() {

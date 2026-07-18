@@ -560,6 +560,12 @@ strong {
   height: 50px;
 }
 
+.experience-logo.mit-logo {
+  object-fit: cover;
+  background: #000;
+  filter: none;
+}
+
 .experience-item {
   display: flex;
   align-items: flex-start;
