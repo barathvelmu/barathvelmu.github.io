@@ -197,7 +197,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-time) ease;
+  transition: transform var(--transition-time) ease, filter var(--transition-time) ease;
 }
 
 .pub-thumbnail:hover img {
@@ -564,6 +564,17 @@ strong {
   object-fit: cover;
   background: #000;
   filter: none;
+}
+
+/* Soften bright image backgrounds against the dark canvas without changing
+   the light theme or muting the black MIT mark. */
+:root[data-theme="dark"] .experience-logo:not(.mit-logo),
+:root[data-theme="dark"] .pub-thumbnail img {
+  filter: brightness(0.88) contrast(0.96) saturate(0.9);
+}
+
+:root[data-theme="dark"] .experience-logo:not(.mit-logo) {
+  background: #e1e3e6;
 }
 
 .experience-item {
