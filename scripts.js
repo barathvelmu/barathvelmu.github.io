@@ -4,6 +4,7 @@ let showingSelected = true;
 
 // Init
 document.addEventListener('DOMContentLoaded', () => {
+  updateCopyrightYear();
   loadPublications();
   initTheme();
   loadVisitCount();
@@ -17,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggle-publications');
   if (toggleButton) toggleButton.addEventListener('click', togglePublications);
 });
+
+function updateCopyrightYear() {
+  const year = document.getElementById('copyright-year');
+  if (year) year.textContent = new Date().getFullYear();
+}
 
 async function loadVisitCount() {
   const element = document.querySelector('#gc-visits strong');
