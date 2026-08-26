@@ -123,7 +123,7 @@ function updateToggleUI() {
   const toggleHeader = document.getElementById('toggle-header');
 
   if (toggleButton) toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
-  if (toggleHeader) toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
+  if (toggleHeader) toggleHeader.textContent = showingSelected ? 'Selected Research Reports' : 'All Research Reports';
 }
 
 // Render lists
