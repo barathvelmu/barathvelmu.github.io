@@ -128,12 +128,15 @@ function updateToggleUI() {
 
 // Render lists
 function renderPublications(showSelectedOnly = true) {
+  const paperContainer = document.getElementById('papers-container');
   const pubContainer = document.getElementById('publications-container');
   const projContainer = document.getElementById('projects-container');
 
+  if (paperContainer) paperContainer.innerHTML = '';
   if (pubContainer) pubContainer.innerHTML = '';
   if (projContainer) projContainer.innerHTML = '';
 
+  const papers = allPublications.filter(p => p.type === 'paper');
   const publications = allPublications.filter(p => p.type === 'publication');
   const projects = allPublications.filter(p => p.type === 'project');
 
@@ -141,6 +144,7 @@ function renderPublications(showSelectedOnly = true) {
     ? publications.filter(p => Number(p.selected) === 1 || p.selected === true)
     : publications;
 
+  if (paperContainer) papers.forEach(paper => paperContainer.appendChild(createPublicationElement(paper)));
   if (pubContainer) pubsToShow.forEach(pub => pubContainer.appendChild(createPublicationElement(pub)));
   if (projContainer) projects.forEach(proj => projContainer.appendChild(createProjectCard(proj)));
 }
@@ -276,34 +280,25 @@ function createPublicationElement(publication) {
     const links = document.createElement('div');
     links.className = 'pub-links';
 
-    if (publication.links.pdf && publication.links.pdf !== '#') {
-      const pdfLink = document.createElement('a');
-      pdfLink.href = publication.links.pdf;
-      pdfLink.textContent = 'PDF';
-      pdfLink.target = '_blank';
-      pdfLink.rel = 'noopener noreferrer';
-      links.appendChild(pdfLink);
-    }
+    const addLink = (href, label) => {
+      if (href && href !== '#') {
+        const a = document.createElement('a');
+        a.href = href;
+        a.textContent = label;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        links.appendChild(a);
+      }
+    };
 
-    if (publication.links.code && publication.links.code !== '#') {
-      const codeLink = document.createElement('a');
-      codeLink.href = publication.links.code;
-      codeLink.textContent = 'Code';
-      codeLink.target = '_blank';
-      codeLink.rel = 'noopener noreferrer';
-      links.appendChild(codeLink);
-    }
+    addLink(publication.links.arxiv, 'arXiv');
+    addLink(publication.links.pdf, 'PDF');
+    addLink(publication.links.code, 'Code');
+    addLink(publication.links.writeup, 'Writeup');
+    addLink(publication.links.thread, 'Thread');
+    addLink(publication.links.project, 'Project Page');
 
-    if (publication.links.project && publication.links.project !== '#') {
-      const projectLink = document.createElement('a');
-      projectLink.href = publication.links.project;
-      projectLink.textContent = 'Project Page';
-      projectLink.target = '_blank';
-      projectLink.rel = 'noopener noreferrer';
-      links.appendChild(projectLink);
-    }
-
-    content.appendChild(links);
+    if (links.childNodes.length > 0) content.appendChild(links);
   }
 
   pubItem.appendChild(thumbnail);

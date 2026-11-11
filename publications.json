@@ -1,6 +1,23 @@
 {
   "publications": [
     {
+      "title": "Subliminal Prompting Beyond Static Geometry: Causal Depth and Multi-Token Confounds",
+      "type": "paper",
+      "authors": [
+        "Barath Velmurugan"
+      ],
+      "venue": "arXiv preprint (cs.CL), July 2026",
+      "thumbnail": "images/subliminal_paper.png",
+      "selected": 1,
+      "award": "",
+      "summary": "Separates four measurements of token entanglement (output co-variation, output-vector alignment, hidden-state readability, causal control) in a fixed animal-number prompting protocol. From Llama-3.1-8B to 70B the fixed output-vector account predicts behavior less well, while transferring a hidden state controls the answer earlier in the network; a Qwen multi-token confound is resolved through total covariance.",
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2609.19149",
+        "pdf": "https://arxiv.org/pdf/2609.19149",
+        "code": "https://github.com/barathvelmu/subliminal-learning"
+      }
+    },
+    {
       "title": "Computer Vision for Automated Damage Detection in Offshore Wind Turbine Inspection",
       "type": "publication",
       "authors": [
@@ -73,7 +90,9 @@
       "title": "Kaetram Arena",
       "type": "project",
       "category": "Distillation / Agents",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Research",
       "selected": 0,
       "award": "",
@@ -88,13 +107,16 @@
       "title": "Subliminal Learning",
       "type": "project",
       "category": "Interpretability",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Research",
       "selected": 0,
       "award": "",
       "summary": "A replication and extension of Anthropic's subliminal-learning result across both image and language models; it traces the effect to the two models starting from the same initialization rather than to the training data, and reconciles two published numbers that had disagreed.",
       "links": {
         "code": "https://github.com/barathvelmu/subliminal-learning",
+        "paper": "https://arxiv.org/abs/2609.19149",
         "writeup": "https://open.substack.com/pub/barathvelmu/p/replicating-subliminal-learning"
       }
     },
@@ -102,7 +124,9 @@
       "title": "Crucible",
       "type": "project",
       "category": "Agent Evaluation",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Project",
       "selected": 0,
       "award": "",
@@ -115,7 +139,9 @@
       "title": "Clinical Corpus Pipeline",
       "type": "project",
       "category": "ML Data Infra",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Project",
       "selected": 0,
       "award": "",
@@ -128,7 +154,9 @@
       "title": "Attractor Lens",
       "type": "project",
       "category": "Interpretability",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Research",
       "selected": 0,
       "award": "",
@@ -142,7 +170,9 @@
       "title": "Deterministic Voice Intelligence",
       "type": "project",
       "category": "Applied AI",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Project",
       "selected": 0,
       "award": "",
@@ -157,7 +187,9 @@
       "title": "ScreenMem",
       "type": "project",
       "category": "RAG / Systems",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Independent Project",
       "selected": 0,
       "award": "",
@@ -170,7 +202,9 @@
       "title": "Spark Studio",
       "type": "project",
       "category": "Applied AI / Web",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Claude Builders @ MIT (3rd Place)",
       "selected": 0,
       "award": "",
@@ -184,7 +218,9 @@
       "title": "Project SERVE",
       "type": "project",
       "category": "Full-Stack Web",
-      "authors": ["Barath Velmurugan"],
+      "authors": [
+        "Barath Velmurugan"
+      ],
       "venue": "Team Project",
       "selected": 0,
       "award": "",
