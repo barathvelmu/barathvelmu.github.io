@@ -88,7 +88,7 @@ function updateThemeIcon() {
 
 // Load publications
 function loadPublications() {
-  fetch('publications.json')
+  fetch('publications.json?v=1007')
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return response.json();
