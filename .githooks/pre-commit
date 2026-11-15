@@ -13,6 +13,13 @@ fi
 node build-static.js >/dev/null
 git add index.html
 
+# Keep the sitemap's lastmod on today's date whenever page content is part of the commit.
+if git diff --cached --quiet -- index.html publications.json; then :; else
+  today=$(date +%Y-%m-%d)
+  sed -i.bak "s#<lastmod>[0-9-]*</lastmod>#<lastmod>${today}</lastmod>#" sitemap.xml && rm -f sitemap.xml.bak
+  git add sitemap.xml
+fi
+
 # Second run must be a no-op; if not, the generator is not idempotent and the commit is unsafe.
 node build-static.js >/dev/null
 if ! git diff --quiet -- index.html; then

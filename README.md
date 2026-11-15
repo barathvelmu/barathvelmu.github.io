@@ -7,3 +7,4 @@ Papers, research reports, and projects live in `publications.json`. The same car
 - A pre-commit hook regenerates and stages `index.html` on every commit. Enable it once per clone: `git config core.hooksPath .githooks`
 - A GitHub Action fails the push if `index.html` was ever committed out of sync.
 - Manual run, if needed: `node build-static.js`
+- `robots.txt` welcomes all crawlers (AI crawlers named explicitly) and points at `sitemap.xml`; the hook bumps the sitemap date on any content commit.
