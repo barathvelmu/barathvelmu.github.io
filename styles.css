@@ -39,19 +39,12 @@ body {
 }
 
 header {
-  position: relative;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-header .theme-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .header-content {
