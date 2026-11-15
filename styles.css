@@ -39,12 +39,19 @@ body {
 }
 
 header {
+  position: relative;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+header .theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .header-content {
@@ -111,8 +118,16 @@ nav a:hover, .social-links-header a:hover {
 
 .social-links-header {
   display: flex;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
   margin: 1.2rem 0;
+}
+
+.social-links-header a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .social-links-header a i {
